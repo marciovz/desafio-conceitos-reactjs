@@ -1,7 +1,26 @@
 
-ul.containerList {
+div.containerList {
   background: #fff;
   padding: 50px;
   min-height: 300px;
 }
 
+div.containerList h1 {
+  color: #333;
+  font-size: 32px;
+}
+
+div.titleList {
+  margin-top: 30px;
+}
+
+div.titleList p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+div.titleList {
+  display: grid;
+  grid-template-columns: 4fr 3fr 3fr 4fr 1fr;
+  align-items: center;
+}

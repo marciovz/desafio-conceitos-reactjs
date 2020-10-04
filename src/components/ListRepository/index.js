@@ -6,25 +6,27 @@ const ListRepository = ({ repositories, handleRemoveRepository }) =>{
 
 
     return (
-      <ul data-testid="repository-list" className="containerList">
+      <div className="containerList">
         <h1>Repositórios</h1>
-        <li className="titleList">
+        <div className="titleList">
           <p>ID</p>
           <p>Título</p>
           <p>URL</p>
           <p>Tecnologias</p>
           <p></p>
-        </li>
+        </div>
 
-        {repositories.map(repository => (
-          <ItemRepository 
-            key={repository.id} 
-            repository={repository} 
-            handleRemoveRepository={() => handleRemoveRepository(repository.id)}
-          />
-        ))}
+        <ul data-testid="repository-list">
+          {repositories.map(repository => (
+            <ItemRepository 
+              key={repository.id} 
+              repository={repository} 
+              handleRemoveRepository={() => handleRemoveRepository(repository.id)}
+            />
+          ))}
+        </ul>
         
-      </ul>
+      </div>
     );
 }
 
