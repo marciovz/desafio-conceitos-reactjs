@@ -1,0 +1,51 @@
+div.selectContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 280px;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  cursor: pointer;
+}
+
+div.selectContainer p {
+  font-size: 16px;
+  color: #444;
+  ;
+}
+
+div.selectContainer svg {
+  font-size: 20px;
+  transition: 0.3s;
+}
+div.selectContainer.active svg {
+  transform: rotateZ(180deg);
+}
+
+div.selectContainer select {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  overflow: hidden;
+  cursor: pointer;
+
+  display: none;
+  width: 280px;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  /*border-bottom: 1px solid #ddd;*/
+  /*border-right: 1px solid #ddd;*/
+}
+
+div.selectContainer.active select {
+  display: block;
+}
+
+div.selectContainer select option {
+  margin: 5px 0;
+}
