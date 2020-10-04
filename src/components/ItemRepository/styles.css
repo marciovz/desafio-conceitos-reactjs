@@ -1,13 +1,4 @@
-li.titleList {
-  margin-top: 30px;
-}
-
-li.titleList p {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-li.itemList, li.titleList {
+li.itemList {
   display: grid;
   grid-template-columns: 4fr 3fr 3fr 4fr 1fr;
   align-items: center;

@@ -9,7 +9,7 @@ const ItemRepository = ({ repository, handleRemoveRepository }) => {
       <p>{repository.title}</p>
       <p>{repository.url}</p>
       <p>{repository.techs.join(', ')}</p>
-      <button onClick={() => handleRemoveRepository(repository.id)}>X</button>            
+      <button data-testid="btnRemoveItem" onClick={() => handleRemoveRepository(repository.id)}>X</button>            
   </li>
   );
 
