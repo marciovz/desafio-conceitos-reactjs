@@ -15,7 +15,6 @@ div.selectContainer {
 div.selectContainer p {
   font-size: 16px;
   color: #444;
-  ;
 }
 
 div.selectContainer svg {
@@ -35,11 +34,8 @@ div.selectContainer select {
 
   display: none;
   width: 280px;
-  padding: 15px;
   font-size: 16px;
   border: 1px solid #ddd;
-  /*border-bottom: 1px solid #ddd;*/
-  /*border-right: 1px solid #ddd;*/
 }
 
 div.selectContainer.active select {
@@ -47,5 +43,5 @@ div.selectContainer.active select {
 }
 
 div.selectContainer select option {
-  margin: 5px 0;
+  padding: 5px 10px;
 }
