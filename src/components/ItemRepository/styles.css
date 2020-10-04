@@ -1,0 +1,39 @@
+li.titleList {
+  margin-top: 30px;
+}
+
+li.titleList p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+li.itemList, li.titleList {
+  display: grid;
+  grid-template-columns: 4fr 3fr 3fr 4fr 1fr;
+  align-items: center;
+}
+
+li.itemList{
+  margin-top: 15px;
+  font-size: 16px
+}
+li.itemList:hover {
+  background: #f8f8f8;
+}
+
+li.itemList button {
+  margin: 0;
+  padding: 0;
+  width: 30pX;
+  height: 30px;
+  font-size: 14px;
+  color: #fff;
+  background: #ca4949;
+  border: 2px solid #ca4949;
+  border-radius: 5px;
+}
+
+li.itemList button:hover {
+  color: #000;
+  background: #d89a9a;
+}
