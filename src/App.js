@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-
+import FormAddRepositry from './components/FormAddRepository';
+import ListRepository from './components/ListRepository';
 import api from './services/api';
 
 import "./styles.css";
@@ -13,38 +14,28 @@ function App() {
     });
   },[]);
 
-  async function handleAddRepository() {
+  async function handleAddRepository({  title, url, techs }) {
     const response = await api.post('repositories', {
-      title: "titulo teste",
-      url: "url@teste.com",
-      techs: ["nodejs"],
+      title,
+      url,
+      techs,
     });
-
     setRepositories([...repositories, response.data]);
   }
 
   async function handleRemoveRepository(id) {
     await api.delete(`repositories/${id}`);
-
     const repoFilter = repositories.filter(repository => repository.id !== id);
     setRepositories(repoFilter);
   }
 
   return (
-    <div>
-      <ul data-testid="repository-list">
-        {repositories.map(repository => (
-          <li key={repository.id}>
-            {repository.title}
-            <button onClick={() => handleRemoveRepository(repository.id)}>
-              Remover
-           </button>            
-          </li>
-        ))}
-        
-      </ul>
-
-      <button onClick={handleAddRepository}>Adicionar</button>
+    <div className="container">
+      <FormAddRepositry addRepository={handleAddRepository}/>
+      <ListRepository 
+        repositories={repositories} 
+        handleRemoveRepository={handleRemoveRepository} 
+      />      
     </div>
   );
 }
