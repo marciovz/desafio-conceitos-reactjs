@@ -27,9 +27,9 @@ export default function FormAddRepository ({addRepository}) {
   }
 
   return (
-    <form>
+    <div className="formContainer">
       <h1>Novo repositório</h1>
-      <div className="inputsContainer">
+       <form>
         <input 
           id="title"
           type="text"
@@ -62,9 +62,10 @@ export default function FormAddRepository ({addRepository}) {
         >
           Adicionar
         </button>
-      </div>
+      
+      </form>
+    </div>
 
-    </form>
   );
 }
 
